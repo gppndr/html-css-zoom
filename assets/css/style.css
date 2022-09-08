@@ -1,0 +1,57 @@
+/* #region common rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* #endregiom */
+
+/* #region utilities */
+#site_header,
+#site_main {
+  background-color: black;
+}
+
+.d_flex {
+  display: flex;
+}
+.row {
+  width: 80%;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.col_7 {
+  width: calc((100% / 12) * 7);
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+}
+/* #endregion */
+
+/* #region header */
+header .cam_settings {
+  justify-content: flex-end;
+  align-items: center;
+  width: 100vw;
+  padding: 1rem 0;
+}
+
+.button {
+  background-color: rgba(128, 128, 128, 0.439);
+  color: white;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+}
+
+.cam, .resize_cam{
+    margin:0 0.5rem;
+}
+/* #endregion header */
