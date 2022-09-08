@@ -10,19 +10,23 @@
 #site_header,
 #site_main {
   background-color: black;
+  width: 100vw;
 }
 
 .d_flex {
   display: flex;
 }
 .row {
-  width: 80%;
   display: flex;
-  gap: 0.5rem;
+  flex-wrap: wrap;
+  gap:1rem;
+}
+.center{
+    justify-content: center;
 }
 
 .col_7 {
-  width: calc((100% / 12) * 7);
+  width: calc((100% / 12) * 2);
 }
 
 .clearfix::after {
@@ -40,7 +44,7 @@ img {
 header .cam_settings {
   justify-content: flex-end;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   padding: 1rem 0;
 }
 
@@ -51,7 +55,32 @@ header .cam_settings {
   border-radius: 0.4rem;
 }
 
-.cam, .resize_cam{
-    margin:0 0.5rem;
+.cam_view,
+.resize_view {
+  margin: 0 0.5rem;
 }
 /* #endregion header */
+
+/* #region main */
+main .cam_section {
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.cam {
+  position: relative;
+}
+
+.name {
+  position: absolute;
+  bottom: 0.3rem;
+  left: 0;
+  background-color: rgba(128, 128, 128, 0.439);
+  color: white;
+  padding: 0.4rem;
+  font-size: 0.7rem;
+}
+/* #endregion main */
+
