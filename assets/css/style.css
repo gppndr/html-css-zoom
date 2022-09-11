@@ -1,16 +1,25 @@
+/* color palette */
+:root {
+  --var-gray: #222222;
+  --var-green: #4bc800;
+}
 /* #region common rules */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 /* #endregiom */
 
 /* #region utilities */
-#site_header,
-#site_main {
+body {
   background-color: black;
-  width: 100vw;
+}
+
+#site_footer {
+  background-color: var(--var-gray);
+  width: 100%;
 }
 
 .d_flex {
@@ -19,14 +28,23 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  gap:1rem;
+  gap: 1rem;
 }
-.center{
-    justify-content: center;
+.center {
+  justify-content: center;
 }
 
+.text_center {
+  text-align: center;
+}
+.align_items_center {
+  align-items: center;
+}
+.space_between {
+  justify-content: space-between;
+}
 .col_7 {
-  width: calc((100% / 12) * 2);
+  width: calc(100% / 8);
 }
 
 .clearfix::after {
@@ -63,10 +81,9 @@ header .cam_settings {
 
 /* #region main */
 main .cam_section {
-  width: 80%;
+  height: 100vh;
   margin: 0 auto;
   align-items: center;
-  padding: 2rem 0;
 }
 
 .cam {
@@ -84,3 +101,43 @@ main .cam_section {
 }
 /* #endregion main */
 
+/* footer */
+
+.settings {
+  color: white;
+}
+.flex_start,
+.flex_end {
+  flex-basis: 20%;
+}
+.flex_start div {
+  padding: 0.5rem;
+}
+.icons p {
+  padding-top: 0.3rem;
+}
+
+.flex_center div {
+  padding: 0.5rem;
+}
+
+.flex_end {
+  justify-content: flex-end;
+  align-items: center;
+}
+.icon {
+  font-size: 1.3rem;
+}
+.arrow {
+  font-size: 0.5rem;
+}
+
+.share .icon {
+  color: var(--var-green);
+}
+
+.end {
+  padding: 1.3rem;
+  background-color: gray;
+  color: red;
+}
